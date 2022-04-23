@@ -1,38 +1,31 @@
+let origArray = [2, 3, 4];
 
-document.addEventListener("DOMContentLoaded", function (event) {
-    
-    let origArray;
-    let origArray1
-    let origArray2
-    
-
-    origArray = [4,9,16];
-    origArray1 = [6,27,64];
-    origArray2 = [16,81,256];
-    document.getElementById("square").addEventListener("click", function () {
-        let = origArray.map(mysquare);
-        document.getElementById("output").value;
-    });
-    
-    document.getElementById("cubed").addEventListener("click", mycube());
-    
-    document.getElementById("ToTheFourth").addEventListener("click", function () {
-        let = origArray.map(MyToTheFourth)
-        document.getElementById("output").value;
-    });
+document.addEventListener('DOMContentLoaded', () => {
+    setTextBoxValues(origArray);
 });
 
-function mysquare() {
-    document.getElementById("two").value = Math.pow(document.getElementById("three").value, 2);
-}
 
-function mycube() {
-    document.getElementById("three").value = Math.pow(document.getElementById("three").value, 2);
+function updateValue() {
+    let squareArray = origArray.map(x=>x*x);
+    setTextBoxValues(squareArray);
+};
+
+function Unknowncubed() {
+    let cubeArray = origArray.map(x=>x*x*x);
+    setTextBoxValues(cubeArray);
+};
+
+function KnownFourth() {
+    let fourthArray = origArray.map(x=>x*x*x*x);
+    setTextBoxValues(fourthArray);
+};
+
+document.getElementById("cubed").addEventListener("click", Unknowncubed);
+
+document.getElementById("Fourth").addEventListener("click", KnownFourth);
     
-}
-
-function MyToTheFourth() {
-    document.getElementById("four").value = Math.pow(document.getElementById("three").value, 4);
-    
-}
-
+function setTextBoxValues(anArray) {
+    document.getElementById("firstTextBox").value = anArray[0];
+    document.getElementById("secondTextBox").value = anArray[1];
+    document.getElementById("thirdTextBox").value = anArray[2];
+};
