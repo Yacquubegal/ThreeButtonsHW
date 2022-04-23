@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <title>3 Buttons</title>
 </head>
+<h1 onmouseover="style.color='red'" onmouseout="style.color='black'">Three Buttons</h1>
 
-<body> 
-    <h1 onmouseover="style.color='red'" onmouseout="style.color='black'">Three Buttons</h1>
-    <form>
-        <input type="text" id="two" name="" value="2"><br>
-        <input type="text" id="three" name="" value="3"><br>
-        <input type="text" id="four" name="" value="4"><br>
-      </form> 
+<body>
+    
+    <input type="text" id="firstTextBox">
+    <br>
+    <input type="text" id="secondTextBox">
+    <br>
+    <input type="text" id="thirdTextBox">
+    <br>
+    <p>
+        <button onclick="updateValue()">square</button>
+        <button  id="cubed">cube</button>  
+        <button  id="Fourth">ToTheFourth</button>
+    </p>
 
-      <input type="button" value="square" id="squared"/>
-      <input type="button" value="cube" id="cubed"/>
-      <input type="button" value="ToTheFourth" id="fourth-power"/>
-      
-      
-      
-    <script type="text/javascrpt" src="script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
