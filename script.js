@@ -4,25 +4,25 @@ document.addEventListener('DOMContentLoaded', () => {
     setTextBoxValues(origArray);
 });
 
-
 function updateValue() {
     let squareArray = origArray.map(x=>x*x);
     setTextBoxValues(squareArray);
 };
 
-function Unknowncubed() {
+document.getElementById("cubed").addEventListener("click", function () {
     let cubeArray = origArray.map(x=>x*x*x);
     setTextBoxValues(cubeArray);
-};
+});
 
 function KnownFourth() {
     let fourthArray = origArray.map(x=>x*x*x*x);
     setTextBoxValues(fourthArray);
 };
 
-document.getElementById("cubed").addEventListener("click", Unknowncubed);
+document.getElementById("output");
 
 document.getElementById("Fourth").addEventListener("click", KnownFourth);
+document.getElementById("output");
     
 function setTextBoxValues(anArray) {
     document.getElementById("firstTextBox").value = anArray[0];
